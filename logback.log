@@ -66,3 +66,7 @@ Caused by: java.io.FileNotFoundException: class path resource [production/alipay
 2019-05-20 10:45:54.166  INFO 12032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2019-05-20 10:45:54.781  INFO 12032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2019-05-20 10:45:54.784  INFO 12032 --- [main] com.maimeng.jd.MmJdApplication           : Started MmJdApplication in 9.503 seconds (JVM running for 10.661)
+2019-05-20 11:58:03.274  INFO 12032 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-05-20 11:58:03.309  INFO 12032 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-05-20 11:58:03.319  INFO 12032 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-05-20 11:58:03.335  INFO 12032 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
