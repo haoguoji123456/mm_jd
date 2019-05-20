@@ -1,0 +1,36 @@
+spring:
+  profiles:
+    active: ${ENV:prod}
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${DB_NAME:mm_jd}?useUnicode=true&characterEncoding=UTF8&serverTimezone=GMT
+    username: ${MYSQL_USER:root}
+    password: ${MYSQL_PASS:root}
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect  #不加这句则默认为myisam引擎
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+    open-in-view: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  ###############################---redis---##############################
+  redis:
+    host: ${REDIS_HOST:127.0.0.1}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+###############################---log---##############################
+logging:
+  file: ./logback.log
+###############################---短信---##############################
+sms:
+  apiKey: 14f453f58257b4851763714958dc5b72
+###############################---jwt---##############################
+jwt:
+  # 加密秘钥
+  secret: f4e2e5203434xx1WET12^%3^(WE45
+  # token有效时长，7天，单位秒
+  expire: 6048000
+  header: token
